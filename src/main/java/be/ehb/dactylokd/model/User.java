@@ -24,7 +24,7 @@ public class User {
 
     @NotNull
     @NotEmpty
-    @Size(min = 5, max = 15)
+    @Size(min = 5, max = 255)
     private String password;
 
     @NotNull

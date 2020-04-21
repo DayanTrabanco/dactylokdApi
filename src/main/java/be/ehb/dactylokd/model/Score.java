@@ -14,7 +14,7 @@ import java.sql.Timestamp;
 public class Score {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; 
+    private Long id;
 
     @NotNull
     private int totalChars;
