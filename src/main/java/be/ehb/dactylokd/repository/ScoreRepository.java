@@ -12,4 +12,5 @@ public interface ScoreRepository extends CrudRepository<Score, Long> {
     Optional<Score> findByUsernameAndStepname(String username , String stepname);
 
     Iterable<Score> findTop10ScoresByStepnameOrderByScoreDesc(String stepname);
+    Iterable<Score> findTop10ScoresByStepnameAndUsernameOrderByScoreDesc(String stepname , String username);
 }

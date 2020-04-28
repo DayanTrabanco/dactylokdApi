@@ -56,6 +56,13 @@ public class ScoreController {
         return score;
     }
 
+    @GetMapping(value = "/topBoth/{stepname},{username}")
+    @NotFound
+    public Iterable<Score> getTop10Scores(@PathVariable String stepname , @PathVariable String username) throws ScoreNotFoundException {
+        Iterable<Score> score = repository.findTop10ScoresByStepnameAndUsernameOrderByScoreDesc(stepname , username);
+        return score;
+    }
+
     @GetMapping(value = "/both/{username},{stepname}")
     @NotFound
     public Score getByUsernameAndStepname(@PathVariable String username , @PathVariable String stepname) throws ScoreNotFoundException {
