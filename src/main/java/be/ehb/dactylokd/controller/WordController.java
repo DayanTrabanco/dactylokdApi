@@ -63,13 +63,9 @@ public class WordController {
 
     @GetMapping(value = "/both/{level},{language}")
     @NotFound
-    public Word getByLevelAndLanguage(@PathVariable int level, @PathVariable String language) throws WordNotFoundException {
-        Optional<Word> word = repository.findByLevelAndLanguage(level, language);
-        if (word.isPresent()) {
-            return word.get();
-        } else {
-            throw new WordNotFoundException();
-        }
+    public Iterable<Word> getByLevelAndLanguage(@PathVariable int level, @PathVariable String language) throws WordNotFoundException {
+        Iterable<Word> word = repository.findByLevelAndLanguage(level, language);
+        return word;
     }
 
 
