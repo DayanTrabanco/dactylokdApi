@@ -11,5 +11,5 @@ public interface WordRepository extends CrudRepository<Word, Long> {
     Iterable<Word> findByLanguage(String language);
     Iterable<Word> findByWord(String word);
 
-    Optional<Word> findByLevelAndLanguage(int level, String language);
+    Iterable<Word> findByLevelAndLanguage(int level, String language);
 }

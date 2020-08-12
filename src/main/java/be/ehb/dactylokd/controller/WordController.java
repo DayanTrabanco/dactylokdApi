@@ -1,10 +1,6 @@
 package be.ehb.dactylokd.controller;
 
-import be.ehb.dactylokd.exception.ScoreNotFoundException;
-import be.ehb.dactylokd.exception.UserNotFoundException;
 import be.ehb.dactylokd.exception.WordNotFoundException;
-import be.ehb.dactylokd.model.Score;
-import be.ehb.dactylokd.model.Step;
 import be.ehb.dactylokd.model.Word;
 import be.ehb.dactylokd.repository.WordRepository;
 import com.sun.istack.NotNull;
